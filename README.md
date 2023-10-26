@@ -8,7 +8,7 @@ Automatically generate Short-Form videos for social media platforms like Instagr
 - HuggingFace API Key
 - ElevenLabs API Key
 
-## Installation
+## ⚙️ Installation
 
 ```bash
 git clone https://github.com/FujiwaraChoki/Marketer.git
@@ -16,21 +16,21 @@ cd Marketer
 pip install -r requirements.txt
 ```
 
-## Usage
+## 🗣️ Usage
 
 ```bash
 python main.py
 ```
 
-## License
+## 🎫 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Acknowledgements
+## 🚿 Acknowledgements
 
 - [ElevenLabs](https://elevenlabs.io/)
 - [HuggingFace](https://huggingface.co/)
 
-## Authors
+## 🤵🏻 Authors
 
 - [@FujiwaraChoki](https://www.github.com/FujiwaraChoki)

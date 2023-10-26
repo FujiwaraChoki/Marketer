@@ -1,0 +1,4 @@
+requests
+moviepy
+pillow
+elevenlabs

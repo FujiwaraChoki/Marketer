@@ -2,7 +2,7 @@
 
 Automatically generate Short-Form videos for social media platforms like Instagram, TikTok, YouTube, etc.
 
-# Prerequisites
+# ⚡ Prerequisites
 
 - Python 3.6 or higher
 - HuggingFace API Key

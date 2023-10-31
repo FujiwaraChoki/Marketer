@@ -1,4 +1,4 @@
 requests
 moviepy
 pillow
-elevenlabs
+pyttsx3

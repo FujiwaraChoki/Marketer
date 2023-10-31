@@ -1,26 +1,17 @@
 import io
 import json
+import pyttsx3
 import requests
 
 from moviepy.editor import *
 from PIL import Image
-from elevenlabs import generate
 
-ELEVEN_LABS_API_KEY = open('api_keys.txt', 'r').read().split('\n')[0]
-HUGGING_FACE_API_KEY = open('api_keys.txt', 'r').read().split('\n')[1]
+HUGGING_FACE_API_KEY = open('api_keys.txt', 'r').read()
+
+ENGINE = pyttsx3.init()
 
 def clean_script_to_file_name(script: str):
     return script.replace(' ', '_').replace('\n', '_').replace('\t', '_').replace('\r', '_').lower()
-
-def generate_tts(script: str):
-    audio = generate(script, voice="Adam", model="eleven_multilingual_v2", api_key=ELEVEN_LABS_API_KEY)
-
-    file_name = clean_script_to_file_name(script)
-    file_path = f'./audio/tts/{file_name}.mp3'
-    with open(file_path, 'wb') as f:
-        f.write(audio)
-
-    return file_path
 
 def generate_images(image_generation_prompts):
     file_paths = []
@@ -58,10 +49,10 @@ def combine_tts_and_images(tts_file_path, image_file_paths, output_path):
     final_video.write_videofile(output_path, codec="libx264")
 
 def main():
-    scripts = json.load(open('scripts.json', 'r', encoding='utf-8'))
+    scripts = json.load(open('resources.json', 'r', encoding='utf-8'))
 
     for script in scripts:
-        tts_file_path = generate_tts(script['text'])
+        tts_file_path = script['tts_path']
         image_file_paths = generate_images(script['image_generation_prompts'])
         output_path = f'./output_videos/{clean_script_to_file_name(script["text"])}.mp4'
         combine_tts_and_images(tts_file_path, image_file_paths, output_path)

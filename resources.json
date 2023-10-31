@@ -1,0 +1,10 @@
+[
+    {
+        "tts_path": "audio/tts/1.mp3",
+        "image_generation_prompts": [
+            "Man crying with open wallet, no money, melancholic, sad, 8K, depressed, hyperrealistic, 1920x1080",
+            "One ai beating another ai, using a sword, 16K, anime-style, 1920x1080",
+            "Happy, smiling person, multiple yellow plus signs in background, standing for benefits, melancholic, hyperrealistic, 1920x1080"
+        ]
+    }
+]
